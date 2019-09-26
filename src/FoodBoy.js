@@ -1,7 +1,7 @@
 import React from 'react';
 import './FoodBoy.sass';
 import CommonMenu from './components/CommonMenu/CommonMenu';
-import Form from './components/Form/Form';
+import Order from './components/Order/Order';
 
 class FoodBoy extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class FoodBoy extends React.Component {
         <main className="main">
           <aside className="panel">
             <h1 className="panel__heading">Разместить заказ</h1>
-            <Form />
+            <Order />
           </aside>
           <div className="inner-container"></div>
         </main>
