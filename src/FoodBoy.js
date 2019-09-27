@@ -1,6 +1,7 @@
 import React from 'react';
 import './FoodBoy.sass';
-import CommonMenu from './components/CommonMenu/CommonMenu';
+//import CommonMenu from './components/CommonMenu/CommonMenu';
+import User from './components/User/User';
 import Order from './components/Order/Order';
 
 class FoodBoy extends React.Component {
@@ -8,11 +9,12 @@ class FoodBoy extends React.Component {
     return (
       <div className="food-boy">
         <header className="header">
-          <CommonMenu
+          {/*<CommonMenu
             mode="horizontal"
             openAnimation="slide-up"
             triggerSubMenuAction="click"
-          />
+          />*/}
+          <User />
         </header>
         <main className="main">
           <aside className="panel">

@@ -2,8 +2,11 @@ import React from 'react';
 import './Order.sass';
 import Option from 'muicss/lib/react/option';
 import Select from 'muicss/lib/react/select';
+import Row from 'muicss/lib/react/row';
+import Col from 'muicss/lib/react/col';
 import Input from 'muicss/lib/react/input';
 import Button from 'muicss/lib/react/button';
+import Textarea from 'muicss/lib/react/textarea';
 
 class Order extends React.Component {
   render() {
@@ -30,38 +33,53 @@ class Order extends React.Component {
         </p>*/}
         <form className="address">
           <legend className="address__desc">Адрес доставки</legend>
-          <div className="address__group">
-            <Input
-              className="address__street"
-              label="Улица"
-              floatingLabel={true}
-              required={true}
-            />
-            <Input
-              className="address__building"
-              label="Дом"
-              floatingLabel={true}
-              required={true}
-            />
-            <Input
-              className="address__apartment"
-              label="Кв."
-              floatingLabel={true}
-              required={true}
-            />
-            <Input
-              className="address__entrance"
-              label="Подъезд"
-              floatingLabel={true}
-              required={true}
-            />
-            <Input
-              className="address__floor"
-              label="Этаж"
-              floatingLabel={true}
-              required={true}
-            />
-          </div>
+          <Row>
+            <Col md="8" xs="12">
+              <Input
+                className="address__street"
+                label="Улица"
+                type="text"
+                floatingLabel={true}
+                required={true}
+              />
+            </Col>
+            <Col md="4" xs="6">
+              <Input
+                className="address__building"
+                label="Дом"
+                type="text"
+                floatingLabel={true}
+                required={true}
+              />
+            </Col>
+            <Col md="4" xs="6">
+              <Input
+                className="address__apartment"
+                label="Кв."
+                type="text"
+                floatingLabel={true}
+                required={true}
+              />
+            </Col>
+            <Col md="4" xs="6">
+              <Input
+                className="address__entrance"
+                label="Подъезд"
+                type="text"
+                floatingLabel={true}
+                required={true}
+              />
+            </Col>
+            <Col md="4" xs="6">
+              <Input
+                className="address__floor"
+                label="Этаж"
+                type="text"
+                floatingLabel={true}
+                required={true}
+              />
+            </Col>
+          </Row>
           {/*<div className="confirm">
             <Select
               className="confirm__options"
@@ -77,7 +95,11 @@ class Order extends React.Component {
               <Option value="option7" label="поселок Иртышский, улица Ленина, 12" />
               <Option value="option8" label="Омск, площадь Ленина" />
             </Select>
-            <Button className="confirm__btn-submit" variant="raised">
+            <Button
+              className="confirm__btn-submit"
+              size="small"
+              variant="raised"
+            >
               Рассчитать
             </Button>
           </div>*/}
@@ -85,9 +107,89 @@ class Order extends React.Component {
             Найти адрес
           </Button>
         </form>
-        <div className="info">
-
-        </div>
+        {/*<div className="info">
+          <form >
+            <Row>
+              <Col md="6" xs="6">
+                <Input
+                  className="info__name"
+                  label="Имя"
+                  type="text"
+                  floatingLabel={true}
+                  required={true}
+                />
+              </Col>
+              <Col md="6" xs="6">
+                <Input
+                  //className="info__name"
+                  label="Телефон"
+                  type="tel"
+                  floatingLabel={true}
+                  required={true}
+                />
+              </Col>
+              <Col md="6" xs="6">
+                <Input
+                  //className="info__name"
+                  label="Цена заказа"
+                  type="text"
+                  floatingLabel={true}
+                  required={true}
+                />
+              </Col>
+              <Col md="6" xs="6">
+                <Input
+                  //className="info__name"
+                  label="Иметь сдачу с"
+                  type="text"
+                  floatingLabel={true}
+                  required={true}
+                />
+              </Col>
+              <Col md="12" xs="12">
+                <Textarea
+                  className="info__comment"
+                  label="Комментарий"
+                  rows="2"
+                  floatingLabel={true}
+                />
+              </Col>
+            </Row>
+          </form>
+          <p className="info__price">
+            Стоимость доставки: <span>99</span> руб.
+          </p>
+          <p className="info__time">
+            Приблизительное время доставки: <span>16:46 (через 45 мин.)</span>
+          </p>
+          <p className="info__arriving">
+            Время прибытия в ресторан: <span>16:17 (через 16 мин.)</span>
+          </p>
+          <p className="info__length">
+            Общая длина маршрута: <span>1</span> км
+          </p>
+          <Row>
+            <Col md="8" xs="8">
+              <Button
+                className="info__btn-submit"
+                size="small"
+                variant="raised"
+              >
+                Отправить
+              </Button>
+            </Col>
+            <Col md="4" xs="4">
+              <Button
+                className="info__btn-back"
+                size="small"
+                variant="raised"
+                color="danger"
+              >
+                Назад
+              </Button>
+            </Col>
+          </Row>
+        </div>*/}
       </div>
     );
   }
