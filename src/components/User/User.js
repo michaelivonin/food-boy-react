@@ -7,7 +7,7 @@ class User extends React.Component {
     return (
       <Dropdown className="account-dropdown">
         <DropdownTrigger>
-          <img className="account-dropdown__avatar" alt=" "/>
+          <img className="account-dropdown__avatar" alt=""/>
           <span className="account-dropdown__name">Халиф Доставка</span>
         </DropdownTrigger>
         <DropdownContent>

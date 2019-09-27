@@ -5,8 +5,28 @@ import Select from 'muicss/lib/react/select';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 import Input from 'muicss/lib/react/input';
+import InputMask from 'react-input-mask';
 import Button from 'muicss/lib/react/button';
 import Textarea from 'muicss/lib/react/textarea';
+
+const TelInput = (props) => (
+  <InputMask
+    mask="+7 (999) 999-9999"
+    maskChar=" "
+    value={props.value}
+    onChange={props.onChange}>
+    {(inputProps) => (
+      <Input
+        {...inputProps}
+        //className="info__name"
+        label="Телефон"
+        type="tel"
+        floatingLabel={true}
+        required={true}
+      />
+    )}
+  </InputMask>
+);
 
 class Order extends React.Component {
   render() {
@@ -15,7 +35,7 @@ class Order extends React.Component {
         <Select
           className="order__branch"
           name="branch"
-          label="Филиал"
+          label="Филиал:"
           defaultValue="option1"
           required={true}
         >
@@ -31,8 +51,8 @@ class Order extends React.Component {
         <p className="order__msg-not-found">
           К сожалению, мы не смогли найти адрес на карте города, попробуйте заново!
         </p>*/}
-        <form className="address">
-          <legend className="address__desc">Адрес доставки</legend>
+        {/*<form className="address">
+          <legend className="address__desc">Адрес доставки:</legend>
           <Row>
             <Col md="8" xs="12">
               <Input
@@ -80,7 +100,7 @@ class Order extends React.Component {
               />
             </Col>
           </Row>
-          {/*<div className="confirm">
+          <div className="confirm">
             <Select
               className="confirm__options"
               name="options"
@@ -102,12 +122,12 @@ class Order extends React.Component {
             >
               Рассчитать
             </Button>
-          </div>*/}
+          </div>
           <Button className="address__btn-submit" variant="raised">
             Найти адрес
           </Button>
-        </form>
-        {/*<div className="info">
+        </form>*/}
+        <div className="info">
           <form >
             <Row>
               <Col md="6" xs="6">
@@ -120,19 +140,14 @@ class Order extends React.Component {
                 />
               </Col>
               <Col md="6" xs="6">
-                <Input
-                  //className="info__name"
-                  label="Телефон"
-                  type="tel"
-                  floatingLabel={true}
-                  required={true}
-                />
+                <TelInput />
               </Col>
               <Col md="6" xs="6">
                 <Input
                   //className="info__name"
                   label="Цена заказа"
-                  type="text"
+                  type="number"
+                  min="1"
                   floatingLabel={true}
                   required={true}
                 />
@@ -141,7 +156,8 @@ class Order extends React.Component {
                 <Input
                   //className="info__name"
                   label="Иметь сдачу с"
-                  type="text"
+                  type="number"
+                  min="100"
                   floatingLabel={true}
                   required={true}
                 />
@@ -157,16 +173,16 @@ class Order extends React.Component {
             </Row>
           </form>
           <p className="info__price">
-            Стоимость доставки: <span>99</span> руб.
+            Стоимость доставки: <span>99</span>&nbsp;руб.
           </p>
           <p className="info__time">
-            Приблизительное время доставки: <span>16:46 (через 45 мин.)</span>
+            Приблизительное время доставки: <span>16:46 (через 45&nbsp;мин.)</span>
           </p>
           <p className="info__arriving">
-            Время прибытия в ресторан: <span>16:17 (через 16 мин.)</span>
+            Время прибытия в ресторан: <span>16:17 (через 16&nbsp;мин.)</span>
           </p>
           <p className="info__length">
-            Общая длина маршрута: <span>1</span> км
+            Общая длина маршрута: <span>1</span>&nbsp;км
           </p>
           <Row>
             <Col md="8" xs="8">
@@ -189,7 +205,7 @@ class Order extends React.Component {
               </Button>
             </Col>
           </Row>
-        </div>*/}
+        </div>
       </div>
     );
   }
