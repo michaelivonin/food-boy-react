@@ -1,5 +1,6 @@
 import React from 'react';
 import Dropdown, { DropdownTrigger, DropdownContent } from 'react-simple-dropdown';
+import Checkbox from 'muicss/lib/react/checkbox';
 import './User.sass';
 
 class User extends React.Component {
@@ -16,10 +17,10 @@ class User extends React.Component {
           </div>
           <ul className="account-dropdown__quick-links account-dropdown__segment">
             <li className="account-dropdown__link">
-              <a className="account-dropdown__link__anchor" href="#">Вариант 2</a>
+              <Checkbox name="inputA2" label="Вариант 2" onChange={(e) => this.props.onVariant2Change(e)} />
             </li>
             <li className="account-dropdown__link">
-              <a className="account-dropdown__link__anchor" href="#">Показать всё</a>
+              <Checkbox name="inputA2" label="Показать всё" onChange={(e) => this.props.onEverythingChange(e)} />
             </li>
           </ul>
           <ul className="account-dropdown__management-links account-dropdown__segment">

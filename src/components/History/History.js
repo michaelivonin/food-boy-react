@@ -9,7 +9,7 @@ class History extends React.Component {
       <div className="history">
         <h3>Заказы</h3>
         <Collapse>
-          <Panel header="№ 9088373" headerClass="my-header-class">
+          <Panel header="№ 9088373" headerClass="history__header">
             <p className="history__date">
               от <b>01.09.2019 22:29</b>
             </p>
@@ -17,7 +17,7 @@ class History extends React.Component {
             <span className="history__price">Стоимость:&nbsp;<b>150&nbsp;р. </b></span>
             <span className="history__delivery-price">Доставка:&nbsp;<b>0&nbsp;р.</b></span>
           </Panel>
-          <Panel header="№">Данные заказа</Panel>
+          <Panel header="№" headerClass="history__header">Данные заказа</Panel>
         </Collapse>
       </div>
     );

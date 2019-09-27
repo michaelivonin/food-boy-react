@@ -42,64 +42,72 @@ class Order extends React.Component {
           <Option value="option1" label="Автоматически" />
           <Option value="option2" label="Фрунзе, 40" />
         </Select>
-        {/*<p className="order__msg-clarify">
-          Мы не смогли найти дом, уточните пожалуйста его на карте.
-        </p>
-        <p className="order__msg-choose">
-          Найдено несколько адресов, выберите корректный ниже и при необходимости уточните на карте.
-        </p>
-        <p className="order__msg-not-found">
-          К сожалению, мы не смогли найти адрес на карте города, попробуйте заново!
-        </p>*/}
-        {/*<form className="address">
-          <legend className="address__desc">Адрес доставки:</legend>
-          <Row>
-            <Col md="8" xs="12">
-              <Input
-                className="address__street"
-                label="Улица"
-                type="text"
-                floatingLabel={true}
-                required={true}
-              />
-            </Col>
-            <Col md="4" xs="6">
-              <Input
-                className="address__building"
-                label="Дом"
-                type="text"
-                floatingLabel={true}
-                required={true}
-              />
-            </Col>
-            <Col md="4" xs="6">
-              <Input
-                className="address__apartment"
-                label="Кв."
-                type="text"
-                floatingLabel={true}
-                required={true}
-              />
-            </Col>
-            <Col md="4" xs="6">
-              <Input
-                className="address__entrance"
-                label="Подъезд"
-                type="text"
-                floatingLabel={true}
-                required={true}
-              />
-            </Col>
-            <Col md="4" xs="6">
-              <Input
-                className="address__floor"
-                label="Этаж"
-                type="text"
-                floatingLabel={true}
-                required={true}
-              />
-            </Col>
-          </Row>
+        {this.props.showAll && (
+          <div>
+            <p className="order__msg order__msg_warning">
+              Мы не смогли найти дом, уточните пожалуйста его на карте.
+            </p>
+            <p className="order__msg order__msg_danger">
+              Найдено несколько адресов, выберите корректный ниже и при необходимости уточните на карте.
+            </p>
+            <p className="order__msg order__msg_danger">
+              К сожалению, мы не смогли найти адрес на карте города, попробуйте заново!
+            </p>
+          </div>
+        )}
+        {(this.props.showAll || !this.props.variant2) && (
+          <form className="address" id="address">
+            <legend className="address__desc">Адрес доставки:</legend>
+            <Row>
+              <Col md="8" xs="12">
+                <Input
+                  className="address__street"
+                  label="Улица"
+                  type="text"
+                  floatingLabel={true}
+                  required={true}
+                />
+              </Col>
+              <Col md="4" xs="6">
+                <Input
+                  className="address__building"
+                  label="Дом"
+                  type="text"
+                  floatingLabel={true}
+                  required={true}
+                />
+              </Col>
+              <Col md="4" xs="6">
+                <Input
+                  className="address__apartment"
+                  label="Кв."
+                  type="text"
+                  floatingLabel={true}
+                  required={true}
+                />
+              </Col>
+              <Col md="4" xs="6">
+                <Input
+                  className="address__entrance"
+                  label="Подъезд"
+                  type="text"
+                  floatingLabel={true}
+                  required={true}
+                />
+              </Col>
+              <Col md="4" xs="6">
+                <Input
+                  className="address__floor"
+                  label="Этаж"
+                  type="text"
+                  floatingLabel={true}
+                  required={true}
+                />
+              </Col>
+            </Row>
+          </form>
+        )}
+        {this.props.showAll && (
           <div className="confirm">
             <Select
               className="confirm__options"
@@ -123,89 +131,94 @@ class Order extends React.Component {
               Рассчитать
             </Button>
           </div>
-          <Button className="address__btn-submit" variant="raised">
+        )}
+        {(this.props.showAll || !this.props.variant2) && (
+          <Button form="address" className="address__btn-submit" variant="raised">
             Найти адрес
           </Button>
-        </form>*/}
-        <div className="info">
-          <form >
+        )}
+        {(this.props.showAll || this.props.variant2) && (
+          <div className="info">
+            <form id="info">
+              <Row>
+                <Col md="6" xs="6">
+                  <Input
+                    className="info__name"
+                    label="Имя"
+                    type="text"
+                    floatingLabel={true}
+                    required={true}
+                  />
+                </Col>
+                <Col md="6" xs="6">
+                  <TelInput />
+                </Col>
+                <Col md="6" xs="6">
+                  <Input
+                    //className="info__name"
+                    label="Цена заказа"
+                    type="number"
+                    min="1"
+                    floatingLabel={true}
+                    required={true}
+                  />
+                </Col>
+                <Col md="6" xs="6">
+                  <Input
+                    //className="info__name"
+                    label="Иметь сдачу с"
+                    type="number"
+                    min="100"
+                    floatingLabel={true}
+                    required={true}
+                  />
+                </Col>
+                <Col md="12" xs="12">
+                  <Textarea
+                    className="info__comment"
+                    label="Комментарий"
+                    rows="2"
+                    floatingLabel={true}
+                  />
+                </Col>
+              </Row>
+            </form>
+            <p className="info__price">
+              Стоимость доставки: <span>99</span>&nbsp;руб.
+            </p>
+            <p className="info__time">
+              Приблизительное время доставки: <span>16:46 (через 45&nbsp;мин.)</span>
+            </p>
+            <p className="info__arriving">
+              Время прибытия в ресторан: <span>16:17 (через 16&nbsp;мин.)</span>
+            </p>
+            <p className="info__length">
+              Общая длина маршрута: <span>1</span>&nbsp;км
+            </p>
             <Row>
-              <Col md="6" xs="6">
-                <Input
-                  className="info__name"
-                  label="Имя"
-                  type="text"
-                  floatingLabel={true}
-                  required={true}
-                />
+              <Col md="8" xs="8">
+                <Button
+                  form="info"
+                  className="info__btn-submit"
+                  size="small"
+                  variant="raised"
+                >
+                  Отправить
+                </Button>
               </Col>
-              <Col md="6" xs="6">
-                <TelInput />
-              </Col>
-              <Col md="6" xs="6">
-                <Input
-                  //className="info__name"
-                  label="Цена заказа"
-                  type="number"
-                  min="1"
-                  floatingLabel={true}
-                  required={true}
-                />
-              </Col>
-              <Col md="6" xs="6">
-                <Input
-                  //className="info__name"
-                  label="Иметь сдачу с"
-                  type="number"
-                  min="100"
-                  floatingLabel={true}
-                  required={true}
-                />
-              </Col>
-              <Col md="12" xs="12">
-                <Textarea
-                  className="info__comment"
-                  label="Комментарий"
-                  rows="2"
-                  floatingLabel={true}
-                />
+              <Col md="4" xs="4">
+                <Button
+                  className="info__btn-back"
+                  size="small"
+                  variant="raised"
+                  color="danger"
+                >
+                  Назад
+                </Button>
               </Col>
             </Row>
-          </form>
-          <p className="info__price">
-            Стоимость доставки: <span>99</span>&nbsp;руб.
-          </p>
-          <p className="info__time">
-            Приблизительное время доставки: <span>16:46 (через 45&nbsp;мин.)</span>
-          </p>
-          <p className="info__arriving">
-            Время прибытия в ресторан: <span>16:17 (через 16&nbsp;мин.)</span>
-          </p>
-          <p className="info__length">
-            Общая длина маршрута: <span>1</span>&nbsp;км
-          </p>
-          <Row>
-            <Col md="8" xs="8">
-              <Button
-                className="info__btn-submit"
-                size="small"
-                variant="raised"
-              >
-                Отправить
-              </Button>
-            </Col>
-            <Col md="4" xs="4">
-              <Button
-                className="info__btn-back"
-                size="small"
-                variant="raised"
-                color="danger"
-              >
-                Назад
-              </Button>
-            </Col>
-          </Row>
-        </div>
+          </div>
+        )}
       </div>
     );
   }
