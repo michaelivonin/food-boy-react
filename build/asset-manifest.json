@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.80df92a2.chunk.css",
-    "main.js": "/static/js/main.3c137f36.chunk.js",
-    "main.js.map": "/static/js/main.3c137f36.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.53b375bc.js",
-    "runtime-main.js.map": "/static/js/runtime-main.53b375bc.js.map",
-    "static/css/2.e2043e69.chunk.css": "/static/css/2.e2043e69.chunk.css",
-    "static/js/2.55f35667.chunk.js": "/static/js/2.55f35667.chunk.js",
-    "static/js/2.55f35667.chunk.js.map": "/static/js/2.55f35667.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.461eb241903c36f7187211b40bc50340.js": "/precache-manifest.461eb241903c36f7187211b40bc50340.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.e2043e69.chunk.css.map": "/static/css/2.e2043e69.chunk.css.map",
-    "static/css/main.80df92a2.chunk.css.map": "/static/css/main.80df92a2.chunk.css.map"
+    "main.css": "/food-boy-react/build/static/css/main.80df92a2.chunk.css",
+    "main.js": "/food-boy-react/build/static/js/main.81e845f6.chunk.js",
+    "main.js.map": "/food-boy-react/build/static/js/main.81e845f6.chunk.js.map",
+    "runtime-main.js": "/food-boy-react/build/static/js/runtime-main.c9f3f07d.js",
+    "runtime-main.js.map": "/food-boy-react/build/static/js/runtime-main.c9f3f07d.js.map",
+    "static/css/2.e2043e69.chunk.css": "/food-boy-react/build/static/css/2.e2043e69.chunk.css",
+    "static/js/2.55f35667.chunk.js": "/food-boy-react/build/static/js/2.55f35667.chunk.js",
+    "static/js/2.55f35667.chunk.js.map": "/food-boy-react/build/static/js/2.55f35667.chunk.js.map",
+    "index.html": "/food-boy-react/build/index.html",
+    "precache-manifest.1097c287aeba4b5ff58a98db03912379.js": "/food-boy-react/build/precache-manifest.1097c287aeba4b5ff58a98db03912379.js",
+    "service-worker.js": "/food-boy-react/build/service-worker.js",
+    "static/css/2.e2043e69.chunk.css.map": "/food-boy-react/build/static/css/2.e2043e69.chunk.css.map",
+    "static/css/main.80df92a2.chunk.css.map": "/food-boy-react/build/static/css/main.80df92a2.chunk.css.map"
   }
 }
