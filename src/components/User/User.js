@@ -1,5 +1,8 @@
 import React from 'react';
 import Dropdown, { DropdownTrigger, DropdownContent } from 'react-simple-dropdown';
+import Icon from '@mdi/react';
+import { mdiMenu } from '@mdi/js';
+import { mdiAccountBox } from '@mdi/js';
 import Checkbox from 'muicss/lib/react/checkbox';
 import './User.sass';
 
@@ -8,8 +11,22 @@ class User extends React.Component {
     return (
       <Dropdown className="account-dropdown">
         <DropdownTrigger>
-          <img className="account-dropdown__avatar" alt=""/>
-          <span className="account-dropdown__name">Халиф Доставка</span>
+          <Icon
+            className="mui--visible-xs-inline-block mui--visible-sm-inline-block"
+            path={mdiMenu}
+            size={1}
+            horizontal
+            color="grey"
+          />
+          <Icon
+            className="mui--hidden-xs mui--hidden-sm"
+            path={mdiAccountBox}
+            title="User Profile"
+            size={1}
+            horizontal
+            color="grey"
+          />
+          <span className="account-dropdown__name mui--hidden-xs mui--hidden-sm">Халиф Доставка</span>
         </DropdownTrigger>
         <DropdownContent>
           <div className="account-dropdown__identity account-dropdown__segment">

@@ -32,6 +32,7 @@ class Order extends React.Component {
   render() {
     return (
       <div className="order">
+        <h1 className="order__heading">Разместить заказ</h1>
         <Select
           className="order__branch"
           name="branch"

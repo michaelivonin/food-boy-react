@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mdi/js": "^4.4.95",
+    "@mdi/react": "^1.2.1",
     "muicss": "^0.9.43",
-    "prop-types": "^15.7.2",
     "rc-collapse": "^1.11.7",
-    "rc-menu": "^7.4.29",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-input-mask": "^2.0.4",
+    "react-media": "^1.10.0",
     "react-scripts": "3.1.2",
     "react-simple-dropdown": "^3.2.3"
   },

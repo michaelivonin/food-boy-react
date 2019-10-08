@@ -1,7 +1,7 @@
 import React from 'react';
 import './FoodBoy.sass';
-//import CommonMenu from './components/CommonMenu/CommonMenu';
 import User from './components/User/User';
+import Media from 'react-media';
 import Order from './components/Order/Order';
 import History from "./components/History/History";
 
@@ -32,23 +32,28 @@ class FoodBoy extends React.Component {
     return (
       <div className="food-boy">
         <header className="header">
-          {/*<CommonMenu
-            mode="horizontal"
-            openAnimation="slide-up"
-            triggerSubMenuAction="click"
-          />*/}
           <User
             onVariant2Change={this.handleVariant2Change}
             onEverythingChange={this.handleEverythingChange}
           />
         </header>
         <main className="main">
-          <aside className="panel">
-            <h1 className="panel__heading">Разместить заказ</h1>
-            <Order variant2={this.state.isVariant2} showAll={this.state.showAll} />
+          <aside className="main__panel">
+            <Media query="(min-width: 1024px)" render={() =>
+              (
+                <Order variant2={this.state.isVariant2} showAll={this.state.showAll} />
+              )}
+            />
             <History />
           </aside>
-          <div className="inner-container"></div>
+          <div className="main__inner">
+            <div className="main__map-wrapper"></div>
+            <Media query="(max-width: 1023px)" render={() =>
+              (
+                <Order variant2={this.state.isVariant2} showAll={this.state.showAll} />
+              )}
+            />
+          </div>
         </main>
       </div>
     );
