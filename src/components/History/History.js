@@ -6,7 +6,7 @@ import './History.sass';
 class History extends React.Component {
   render() {
     return (
-      <div className="history">
+      <div className={this.props.className}>
         <h3>Заказы</h3>
         <Collapse>
           <Panel header="№ 9088373" headerClass="history__header">

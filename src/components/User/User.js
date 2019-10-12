@@ -1,8 +1,7 @@
 import React from 'react';
 import Dropdown, { DropdownTrigger, DropdownContent } from 'react-simple-dropdown';
 import Icon from '@mdi/react';
-import { mdiMenu } from '@mdi/js';
-import { mdiAccountBox } from '@mdi/js';
+import { mdiAccountBox, mdiMenu } from '@mdi/js';
 import Checkbox from 'muicss/lib/react/checkbox';
 import './User.sass';
 
