@@ -48,7 +48,7 @@ class FoodBoy extends React.Component {
             onEverythingChange={this.handleEverythingChange}
           />
         </header>
-        <main className="main">
+        <main className={this.state.isHistoryMenuOpen ? "main main_fixed" : "main"}>
           <aside className={this.state.isHistoryMenuOpen ? "main__panel main__panel_open" : "main__panel"}>
             <a
               className="main__toggle mui--visible-xs-inline-block mui--visible-sm-inline-block"
@@ -69,18 +69,15 @@ class FoodBoy extends React.Component {
                 <Order variant2={this.state.isVariant2} showAll={this.state.showAll} />
               )}
             />
-            <History className={this.state.isHistoryMenuOpen ?
-              "history" :
-              "history mui--hidden-xs mui--hidden-sm"
-            }/>
+            <History className={this.state.isHistoryMenuOpen ? "history" : "history history_closed"}/>
           </aside>
           <div className="main__inner">
-            <div className="main__map-wrapper"></div>
             <Media query="(max-width: 1023px)" render={() =>
               (
                 <Order variant2={this.state.isVariant2} showAll={this.state.showAll} />
               )}
             />
+            <div className="main__map-wrapper"></div>
           </div>
         </main>
       </div>

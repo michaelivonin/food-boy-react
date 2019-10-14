@@ -51,25 +51,31 @@
       min-height: calc(100vh - 73px)
 
 @media (max-width: 767px)
+  .header
+    height: 42px
+
   .main
     position: relative
-    min-height: calc(100vh - 53px)
+    min-height: calc(100vh - 43px)
+    padding-left: 34px
 
     &__panel
       height: auto
       min-height: calc(100vh - 73px)
       flex: none
-      padding: 10px
-      transition: all 500ms linear
+      padding: 15px 5px
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      z-index: 1
+      transform: translateX(calc(-100% + 34px))
+      transition: transform 400ms ease-out
 
       &_open
-        background-color: lightgreen
-        //position: absolute
-        //top: 0
-        //left: 0
-        //right: 50%
-        flex: 1 1 50%
-        transition: all 500ms linear
+        padding: 15px 10px
+        transform: translateX(0)
 
     &__toggle
       float: right
