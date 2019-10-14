@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/food-boy-react/build/static/css/main.80df92a2.chunk.css",
-    "main.js": "/food-boy-react/build/static/js/main.81e845f6.chunk.js",
-    "main.js.map": "/food-boy-react/build/static/js/main.81e845f6.chunk.js.map",
+    "main.css": "/food-boy-react/build/static/css/main.a718aa5f.chunk.css",
+    "main.js": "/food-boy-react/build/static/js/main.7dd5634d.chunk.js",
+    "main.js.map": "/food-boy-react/build/static/js/main.7dd5634d.chunk.js.map",
     "runtime-main.js": "/food-boy-react/build/static/js/runtime-main.c9f3f07d.js",
     "runtime-main.js.map": "/food-boy-react/build/static/js/runtime-main.c9f3f07d.js.map",
     "static/css/2.e2043e69.chunk.css": "/food-boy-react/build/static/css/2.e2043e69.chunk.css",
-    "static/js/2.55f35667.chunk.js": "/food-boy-react/build/static/js/2.55f35667.chunk.js",
-    "static/js/2.55f35667.chunk.js.map": "/food-boy-react/build/static/js/2.55f35667.chunk.js.map",
+    "static/js/2.990f098e.chunk.js": "/food-boy-react/build/static/js/2.990f098e.chunk.js",
+    "static/js/2.990f098e.chunk.js.map": "/food-boy-react/build/static/js/2.990f098e.chunk.js.map",
     "index.html": "/food-boy-react/build/index.html",
-    "precache-manifest.1097c287aeba4b5ff58a98db03912379.js": "/food-boy-react/build/precache-manifest.1097c287aeba4b5ff58a98db03912379.js",
+    "precache-manifest.f27903401ad82247926d8ac11de0a9fb.js": "/food-boy-react/build/precache-manifest.f27903401ad82247926d8ac11de0a9fb.js",
     "service-worker.js": "/food-boy-react/build/service-worker.js",
     "static/css/2.e2043e69.chunk.css.map": "/food-boy-react/build/static/css/2.e2043e69.chunk.css.map",
-    "static/css/main.80df92a2.chunk.css.map": "/food-boy-react/build/static/css/main.80df92a2.chunk.css.map"
+    "static/css/main.a718aa5f.chunk.css.map": "/food-boy-react/build/static/css/main.a718aa5f.chunk.css.map"
   }
 }
